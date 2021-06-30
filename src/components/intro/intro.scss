@@ -1,0 +1,100 @@
+.intro {
+  background-color: white;
+  display: flex;
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+    .imgContainer {
+      width: 500px;
+      height: 500px;
+      background-color: whitesmoke;
+      border-radius: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+
+      img {
+        height: 90%;
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+
+      .namaste {
+        img {
+          position: absolute;
+          top: 0px;
+          left: 53.5%;
+          width: 180px;
+          height: 180px;
+          // animation: namasteBlink 15s infinite;
+        }
+
+        // @keyframes namasteBlink {
+        //   100% {
+        //     opacity: 0;
+        //   }
+        // }
+        h1 {
+          font-size: 50px;
+          margin: 10px 0;
+        }
+        h2 {
+          font-size: 35px;
+        }
+
+        h3 {
+          font-size: 30px;
+          span {
+            font-size: inherit;
+            color: crimson;
+          }
+
+          .ityped-cursor {
+            font-size: 2.2rem;
+            opacity: 1;
+            -webkit-animation: blink 0.3s infinite;
+            -moz-animation: blink 0.3s infinite;
+            animation: blink 0.3s infinite;
+            animation-direction: alternate;
+          }
+
+          @keyframes blink {
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 62%;
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+      }
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
