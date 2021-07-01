@@ -2,6 +2,8 @@ import "./works.scss";
 import WorkSlider from "./WorkSlider";
 import { featuredAPP as data } from "../../data/data";
 import { useState } from "react";
+import arrow from "../img/arrow.png";
+
 const Works = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -24,13 +26,13 @@ const Works = () => {
       </div>
       <img
         onClick={() => slideHandler("lefr")}
-        src="assets/arrow.png"
+        src={arrow}
         className="arrow left"
         alt="arrow"
       />
       <img
         onClick={() => slideHandler()}
-        src="assets/arrow.png"
+        src={arrow}
         className="arrow right"
         alt="arrow"
       />

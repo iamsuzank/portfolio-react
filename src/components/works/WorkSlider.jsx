@@ -1,4 +1,5 @@
 import React from "react";
+import mobile from "../img/mobile.png";
 
 const WorkSlider = ({ title, img, desc }) => {
   return (
@@ -7,7 +8,7 @@ const WorkSlider = ({ title, img, desc }) => {
         <div className="left">
           <div className="leftContainer">
             <div className="imgContainer">
-              <img src="../assets/mobile.png" alt="mobile" />
+              <img src={mobile} alt="mobile" />
             </div>
             <h2>{title}</h2>
             <p>{desc}</p>
