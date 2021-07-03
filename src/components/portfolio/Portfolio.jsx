@@ -3,11 +3,12 @@ import "./portfolio.scss";
 import PortfolioList from "./PortfolioList";
 import { featuredAPP, AIAPP, webAPP, mobileAPP } from "../../data/data";
 import { ExpandMore } from "@material-ui/icons";
+import Modal from "./Modal";
 
 const Portfolio = () => {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
-
+  const [show, setShow] = useState(false);
   const list = [
     {
       id: "featured",
@@ -51,6 +52,19 @@ const Portfolio = () => {
     }
   }, [selected]);
 
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [code, setCode] = useState("");
+  const [demo, setDemo] = useState("");
+
+  const modalPropsHandler = (apps) => {
+    setShow(!show);
+    setTitle(apps.title);
+    setDesc(apps.desc);
+    setCode(apps.codeLink);
+    setDemo(apps.demoLink);
+  };
+
   return (
     <div className="portfolio" id="portfolio">
       <div className="upper">
@@ -62,16 +76,33 @@ const Portfolio = () => {
               active={selected === item.id}
               setSelected={setSelected}
               id={item.id}
+              show={show}
+              setShow={setShow}
             />
           ))}
         </ul>
         <div className="container">
-          {data.map((apps) => (
-            <div className="item">
-              <img src={apps.img} alt="apps.title" />
-              <h3>{apps.title}</h3>
-            </div>
-          ))}
+          {show ? (
+            <Modal
+              show={show}
+              setShow={setShow}
+              title={title}
+              desc={desc}
+              code={code}
+              demo={demo}
+            />
+          ) : (
+            data.map((apps) => (
+              <div className="item">
+                <img
+                  src={apps.img}
+                  alt="apps.title"
+                  onClick={() => modalPropsHandler(apps)}
+                />
+                <h3>{apps.title}</h3>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
