@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.2a5a1c4a.chunk.css",
+    "main.css": "/portfolio-react/static/css/main.a965754e.chunk.css",
     "main.js": "/portfolio-react/static/js/main.dd5230fc.chunk.js",
     "main.js.map": "/portfolio-react/static/js/main.dd5230fc.chunk.js.map",
     "runtime-main.js": "/portfolio-react/static/js/runtime-main.76f6ebfb.js",
@@ -8,7 +8,7 @@
     "static/js/2.426caa91.chunk.js": "/portfolio-react/static/js/2.426caa91.chunk.js",
     "static/js/2.426caa91.chunk.js.map": "/portfolio-react/static/js/2.426caa91.chunk.js.map",
     "index.html": "/portfolio-react/index.html",
-    "static/css/main.2a5a1c4a.chunk.css.map": "/portfolio-react/static/css/main.2a5a1c4a.chunk.css.map",
+    "static/css/main.a965754e.chunk.css.map": "/portfolio-react/static/css/main.a965754e.chunk.css.map",
     "static/js/2.426caa91.chunk.js.LICENSE.txt": "/portfolio-react/static/js/2.426caa91.chunk.js.LICENSE.txt",
     "static/media/me.0b8845cc.png": "/portfolio-react/static/media/me.0b8845cc.png",
     "static/media/namaste.0564a168.png": "/portfolio-react/static/media/namaste.0564a168.png",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.76f6ebfb.js",
     "static/js/2.426caa91.chunk.js",
-    "static/css/main.2a5a1c4a.chunk.css",
+    "static/css/main.a965754e.chunk.css",
     "static/js/main.dd5230fc.chunk.js"
   ]
 }
