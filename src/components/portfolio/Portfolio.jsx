@@ -33,21 +33,26 @@ const Portfolio = () => {
     switch (selected) {
       case "featured":
         setData(featuredAPP);
+        setShow(false);
         break;
 
       case "web":
         setData(webAPP);
+        setShow(false);
         break;
 
       case "mobile":
+        setShow(false);
         setData(mobileAPP);
         break;
 
       case "AI":
+        setShow(false);
         setData(AIAPP);
         break;
 
       default:
+        setShow(false);
         setData(featuredAPP);
     }
   }, [selected]);

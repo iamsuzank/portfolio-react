@@ -12,7 +12,7 @@ const Modal = ({ show, setShow, title, desc, code, demo }) => {
     >
       <div className="modal-header">
         <p>{title}</p>
-        <span onClick={() => setShow(!show)} className="close-modal-btn">
+        <span onClick={() => setShow(false)} className="close-modal-btn">
           X
         </span>
       </div>
