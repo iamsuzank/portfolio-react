@@ -6,25 +6,31 @@ import Works from "./components/works/Works";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Menu from "./components/menu/Menu";
+import Home from "./components/home/Home";
+import Navbar from "./components/navbar/Navbar";
 import "./app.scss";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
-  // state to control menu
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="app">
-      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-
-      <div className="sections">
-        <Intro />
-        <Portfolio />
-        <Works />
-        <Testimonials />
-        <Contact />
+    <Router>
+      <div className="app">
+        <Navbar />
+        <div className="sections">
+          <Route path="/" exact component={Home} />
+          <Switch>
+            <Route path="/intro" component={Intro} />
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/works" component={Works} />
+            <Route path="/testimonials" component={Testimonials} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/nav" component={Navbar}></Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

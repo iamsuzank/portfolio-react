@@ -3,7 +3,8 @@ import { init } from "ityped";
 import React, { useEffect, useRef } from "react";
 import down from "../img/down.png";
 import me from "../img/me.png";
-import namaste from "../img/namaste.png";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   const textRef = useRef();
@@ -33,7 +34,6 @@ const Intro = () => {
       <div className="right">
         <div className="wrapper">
           <div className="namaste">
-            <img src={namaste} alt="namaste" />
             <h2>Namaste</h2>
             <h1>I'm, Sujan Katwal</h1>
             <h3>
@@ -41,9 +41,9 @@ const Intro = () => {
             </h3>
           </div>
         </div>
-        <a href="#portfolio">
-          <img src={down} alt="click to view more" />
-        </a>
+        <Link to="/portfolio">
+          <KeyboardArrowDownIcon />
+        </Link>
       </div>
     </div>
   );

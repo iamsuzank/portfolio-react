@@ -3,6 +3,7 @@ import WorkSlider from "./WorkSlider";
 import { featuredAPP as data } from "../../data/data";
 import { useState } from "react";
 import arrow from "../img/arrow.png";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 const Works = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,8 +21,8 @@ const Works = () => {
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
-        {data.map((d) => (
-          <WorkSlider title={d.title} img={d.img} desc={d.desc} />
+        {data.map((d, index) => (
+          <WorkSlider key={index} title={d.title} img={d.img} desc={d.desc} />
         ))}
       </div>
       <img
@@ -30,6 +31,7 @@ const Works = () => {
         className="arrow left"
         alt="arrow"
       />
+
       <img
         onClick={() => slideHandler()}
         src={arrow}
@@ -38,6 +40,8 @@ const Works = () => {
       />
     </div>
   );
+
+  <KeyboardArrowDownIcon />;
 };
 
 export default Works;

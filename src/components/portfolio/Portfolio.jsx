@@ -4,6 +4,9 @@ import PortfolioList from "./PortfolioList";
 import { featuredAPP, AIAPP, webAPP, mobileAPP } from "../../data/data";
 import { ExpandMore } from "@material-ui/icons";
 import Modal from "./Modal";
+import down from "../img/down.png";
+import { Link } from "react-router-dom";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 const Portfolio = () => {
   const [selected, setSelected] = useState("featured");
@@ -75,7 +78,7 @@ const Portfolio = () => {
       <div className="upper">
         <h1>Portfolio</h1>
         <ul>
-          {list.map((item) => (
+          {list.map((item, index) => (
             <PortfolioList
               title={item.title}
               active={selected === item.id}
@@ -83,6 +86,7 @@ const Portfolio = () => {
               id={item.id}
               show={show}
               setShow={setShow}
+              key={index}
             />
           ))}
         </ul>
@@ -97,8 +101,8 @@ const Portfolio = () => {
               demo={demo}
             />
           ) : (
-            data.map((apps) => (
-              <div className="item">
+            data.map((apps, index) => (
+              <div className="item" key={index}>
                 <img
                   src={apps.img}
                   alt="apps.title"
@@ -108,6 +112,11 @@ const Portfolio = () => {
               </div>
             ))
           )}
+        </div>
+        <div className="buttom">
+          <Link to="/works">
+            <KeyboardArrowDownIcon />
+          </Link>
         </div>
       </div>
     </div>
